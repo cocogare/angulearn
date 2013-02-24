@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Angular filters</title>
+    <script src="vendor/underscore.js"></script>
+    <link rel="stylesheet" href="vendor/foundation.min.css">
+    <style type="text/css">
+        body {
+            margin: 16px;
+        }
+        .red {
+            color: #982134;
+        }
+    </style>
+</head>
+<body>
+
+
+<div ng-app="myApp">
+    <div class="row" ng-controller="AppCtrl">
+
+
+        <div class="four columns">
+            <h3>Items</h3>
+            <table>
+                <tr>
+                    <th>Maker</th>
+                    <th>Model</th>
+                    <th>Count</th>
+                </tr>
+
+                <tr ng-repeat="phone in phones">
+                    <td>
+                        {{phone.make}}
+                    </td>
+                    <td>{{phone.model}}</td>
+                    <td>{{phone.count}}</td>
+                    <td>
+                        <button ng-click="addToCart(phone.id)">Add</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="three columns">
+            <h3>Cart</h3>
+            <table >
+                <tr ng-repeat="item in cart">
+                    <td>{{item.name}}</td>
+                    <td>{{item.count}}</td>
+                    <td><button>Remove</button></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="five columns">
+
+        </div>
+
+
+    </div>
+</div>
+
+<script src="vendor/angular.min.js"></script>
+<script src="datagrid.js"></script>
+</body>
+</html>
