@@ -50,3 +50,6 @@ function AppCtrl($scope) {
     }
 }
 
+function CartCtrl($scope) {
+
+}
